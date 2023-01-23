@@ -27,6 +27,24 @@ run interactive mode
 name container
   docker run -d --name webapp nginx:1.14-alpine
 
+port mapping / port publishing
+Ports on the left(before ->) are published on the host.
+  docker run -p 38282:8080 kodekloud/simple-webapp:blue
+      - docker container internal IP only accessible within the docker host
+      - user outside docker host needs host IP address and 
+        need be an open port to map the container in the docker host
+
+volume mapping - data persisted in the docker container
+docker container has its own isolated file system
+  docker run -v /opt/datadir:/var/lib/mysql mysql
+    /opt/datadir - path in the docker host
+    /var/lib/mysql - path in the container to save the data for mysql
   
+inspect a running container, find env variable set on container
+  docker inspect <container_name/id> 
 
+env variable set on container running (another way)
+  run docker exec -it <ID_or_Name> env
 
+  
+  
