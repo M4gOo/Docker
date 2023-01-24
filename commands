@@ -41,6 +41,10 @@ run interactive mode
 name container
   docker run -d --name webapp nginx:1.14-alpine
 
+to limiti resource
+  docker run --cpu=.5 ubuntu
+  docker run --memory=100m ubuntu
+
 port mapping / port publishing
 Ports on the left(before ->) are published on the host.
   docker run -p 38282:8080 kodekloud/simple-webapp:blue
