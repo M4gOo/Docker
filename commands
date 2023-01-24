@@ -44,6 +44,9 @@ name container
 to limiti resource
   docker run --cpu=.5 ubuntu
   docker run --memory=100m ubuntu
+  
+create link between containers (check in the source code)
+  docker run -d --name webapp --link db:db result-app
 
 port mapping / port publishing
 Ports on the left(before ->) are published on the host.
