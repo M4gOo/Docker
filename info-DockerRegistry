@@ -3,3 +3,8 @@ when you install docker in a system it creates a folder structure at
 /var/lib/docker
 all the data (image, containers) are store there
 
+
+
+==================  DockerRegistry  =============================
+
+docker login private-registry.io
