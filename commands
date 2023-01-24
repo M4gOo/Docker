@@ -89,5 +89,7 @@ remove image
 execute a command inside the container
   docker exec <ID_or_name> <command>
   
+list network
+  docker network ls
 
 
