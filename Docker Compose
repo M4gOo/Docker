@@ -1,0 +1,7 @@
+
+need to be installed, doesnt come with docker by default
+#simply run a docker compose up command to bring up the entire application stack.  
+This is easier to implement run and maintain. As all changes are always stored in the docker compose configuration file. 
+It is only applicable to running containers on a single Docker Host 
+# if you need to set up a complex application running multiple services a better way to do it is to use DOCKER COMPOSE.
+docker compose is a YAML format
