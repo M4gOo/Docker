@@ -1,10 +1,24 @@
 
 docker version
 
-docker pull <image>
-docker pull M4gOo/my-image
-https://hub.docker.com/search?q=
+download an image. https://hub.docker.com/search?q=
+  docker pull <image>
+  docker pull M4gOo/my-image
 
+make public in docker hub. when you push to the repository 
+to make public you need first build the image and tag with your account name
+  docker push M4gOo/my-image
+
+login in the docker hub
+  docker login
+
+list of available images and their sizes on our host
+  docker images
+
+list containers running or not
+  docker ps
+  docker ps -a  (previously stopped or exited containers)
+  
 if the image is not local it will pull from the dockerhub
   docker run <image>
   docker run <image> sleep 5
@@ -42,9 +56,30 @@ docker container has its own isolated file system
   
 inspect a running container, find env variable set on container
   docker inspect <container_name/id> 
-
+  
 env variable set on container running (another way)
   run docker exec -it <ID_or_Name> env
+  
+size of layers
+  docker history <image>
+  
+create your own Dockerfile and build the image.
+  docker build Dockerfile -t M4gOo/my-image
+  
+check the logs
+  docker logs <ID_or_name>
 
+stop the container
+  docker stop <ID_or_name>
+
+remove container
+  docker rm <ID_or_name> <ID_or_name> <ID_or_name>
+
+remove image 
+  docker rmi <image>
   
+execute a command inside the container
+  docker exec <ID_or_name> <command>
   
+
+
