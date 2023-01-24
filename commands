@@ -58,6 +58,7 @@ Ports on the left(before ->) are published on the host.
 volume mapping - data persisted in the docker container
 docker container has its own isolated file system
   docker run -v /opt/datadir:/var/lib/mysql mysql
+  docker run -v /opt/data:/var/lib/mysql -d --name mysql-db -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
     /opt/datadir - path in the docker host
     /var/lib/mysql - path in the container to save the data for mysql
   
